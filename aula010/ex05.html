@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt.br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento dom.</title>
+<style>
+    div#area{
+        font: normal 15pt arial;
+        background-color: green;
+        color: white;
+        width: 200px;
+        height: 200px;  
+        line-height: 200px;
+        text-align: center;  }
+    div{
+        font: normal 20px arial;
+        text-align: center;
+        background-color: red;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+
+
+    }
+        div.sds{
+            font: normal 30px arial;
+            background-color: blue;
+            line-height: 200px;
+
+            
+
+}
+</style>
+</head>
+<body>
+<div  id="area" >
+    interagir...
+</div>
+<div  >Começar..</div>
+
+<div class="sds" >melhora <br> apredizado.</div>
+
+<script>
+     var a =document.getElementById('area')
+     a.addEventListener('click',clicar)
+     a.addEventListener('mouseenter',entrar)
+     a.addEventListener('mouseout',sair)
+
+    function clicar(){
+        
+        a.innerText= 'clicou!'
+        a.style.background ='red'
+    }        
+    function entrar(){
+       
+        a.innerText='entrar!'
+    
+    }
+    function sair(){
+        a.style.background ='green'
+       
+        a.innerText= 'sair!'
+    }
+    
+
+   
+</script>
+</body>
+</html>

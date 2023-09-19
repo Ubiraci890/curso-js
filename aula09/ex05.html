@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primeiro passo com DOM</title>
+    <style>
+        body{
+            
+            background-color: rgb(47, 0, 255);
+            color: aliceblue;
+            font: normal 10pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>iniciando estudo com DOM</h1>
+<P>Aqui vai resultado</P>
+    <P>aqui inicia mas estudo do <strong>DOM</strong> em javaScript .
+
+    </P>
+    <div>Clique em min.</div>
+    <div id="sds" >Comencando os teste</div>
+
+    <script>
+        window.document.write('ola, mundo!')
+
+        var corpo = document.body
+
+        var n1 =document.getElementsByTagName('p')[0]
+       n1.style.color='black'
+
+       corpo.style.background = 'black'
+
+       var d=document.getElementById('sds')
+       d.style.background= 
+       'yellow'
+       d.style.color ='black'
+       /*d.innerText ='vamas estuda'*/var d=document.querySelector('div#sds')
+       d.style.color='black'
+    </script>
+</body>
+</html>
