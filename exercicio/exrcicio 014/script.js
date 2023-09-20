@@ -7,46 +7,36 @@ let res = document.getElementById('res')
 
 
 if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){
-    window.alert('[ERRO] Falta dados!')
+   // window.alert('[ERRO] Falta dados!')
+    res.innerHTML='impossiviel contar!'
 
-}else {
-
-res.innerHTML = 'contando:'
-let i =Number(ini.value)
-let f =Number(fim.value)
-let p =Number(passo.value)
-
-for(let c = i; c <= f; c += p )
-res.innerHTML += `${c}U+1F449 `
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   
+} else{
+    res.innerHTML = 'contando:'
+    let i =Number (ini.value)
+    let f =Number(fim.value)
+    let p =Number(passo.value)
+    if (i < f)
+    //contagem crecente
+    {for
+        (let c = i ; c <= f; c += p){
+            res.innerHTML +=`${c} \u{1F449}`
+            
+           
+    
+        }
+      //contagem regressiva
+    }else{
+        for(let c = i; c >= f; c -= p){
+            res.innerHTML += `${c} \u{1F64C}`
+        }
+    
+    }
+    res.innerHTML += `\u{1F600}`
+ }
 
 
 
 }
- 
 
-
-
-
-
-
-
-
-
+    
